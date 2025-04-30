@@ -18,7 +18,7 @@ import java.util.Map;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(entityManagerFactoryRef = "realEstateZoningEntityManagerFactory", transactionManagerRef = "realEstateZoningTransactionManager", basePackages = {"com.eliass.zoningtool.realestatezoning.repository"})
+@EnableJpaRepositories(entityManagerFactoryRef = "realEstateZoningEntityManagerFactory", transactionManagerRef = "realEstateZoningTransactionManager", basePackages = {"com.eliass.zoningtool.realestatedb.repository"})
 
 public class RealEstateZoningConfig {
 
@@ -37,7 +37,7 @@ public class RealEstateZoningConfig {
     public LocalContainerEntityManagerFactoryBean realEstateZoningEntityManagerFactory(@Qualifier("realEstateZoningDataSource") DataSource realEstateZoningDataSource, EntityManagerFactoryBuilder builder) {
         return builder
                 .dataSource(realEstateZoningDataSource)
-                .packages("com.eliass.zoningtool.realestatezoning.entity")
+                .packages("com.eliass.zoningtool.realestatedb.entity")
                 .persistenceUnit("realEstateZoning")
                 .properties(Map.of("hibernate.hbm2ddl.auto", "none"))
                 .build();
