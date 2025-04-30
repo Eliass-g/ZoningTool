@@ -1,7 +1,7 @@
-package com.eliass.zoningtool.controller;
+package com.eliass.zoningtool.zoningupdates.controller;
 
-import com.eliass.zoningtool.dto.ZoningUpdateDto;
-import com.eliass.zoningtool.service.ZoningUpdateService;
+import com.eliass.zoningtool.zoningupdates.dto.ZoningUpdateDto;
+import com.eliass.zoningtool.zoningupdates.service.ZoningUpdateService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

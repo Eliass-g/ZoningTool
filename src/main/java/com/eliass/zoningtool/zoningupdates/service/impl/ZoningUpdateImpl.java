@@ -1,11 +1,11 @@
-package com.eliass.zoningtool.service.impl;
+package com.eliass.zoningtool.zoningupdates.service.impl;
 
-import com.eliass.zoningtool.dto.ZoningUpdateDto;
-import com.eliass.zoningtool.entity.ZoningUpdate;
-import com.eliass.zoningtool.exception.ResourceNotFoundException;
-import com.eliass.zoningtool.mapper.ZoningUpdateMapper;
-import com.eliass.zoningtool.repository.ZoningUpdateRepository;
-import com.eliass.zoningtool.service.ZoningUpdateService;
+import com.eliass.zoningtool.zoningupdates.dto.ZoningUpdateDto;
+import com.eliass.zoningtool.zoningupdates.entity.ZoningUpdate;
+import com.eliass.zoningtool.zoningupdates.exception.ResourceNotFoundException;
+import com.eliass.zoningtool.zoningupdates.mapper.ZoningUpdateMapper;
+import com.eliass.zoningtool.zoningupdates.repository.ZoningUpdateRepository;
+import com.eliass.zoningtool.zoningupdates.service.ZoningUpdateService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

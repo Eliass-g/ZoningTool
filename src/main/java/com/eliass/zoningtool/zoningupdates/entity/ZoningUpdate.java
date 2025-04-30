@@ -1,4 +1,4 @@
-package com.eliass.zoningtool.entity;
+package com.eliass.zoningtool.zoningupdates.entity;
 
 
 import jakarta.persistence.*;

@@ -1,4 +1,4 @@
-package com.eliass.zoningtool.dto;
+package com.eliass.zoningtool.zoningupdates.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

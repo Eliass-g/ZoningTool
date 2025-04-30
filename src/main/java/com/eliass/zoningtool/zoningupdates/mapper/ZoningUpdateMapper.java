@@ -1,7 +1,7 @@
-package com.eliass.zoningtool.mapper;
+package com.eliass.zoningtool.zoningupdates.mapper;
 
-import com.eliass.zoningtool.dto.ZoningUpdateDto;
-import com.eliass.zoningtool.entity.ZoningUpdate;
+import com.eliass.zoningtool.zoningupdates.dto.ZoningUpdateDto;
+import com.eliass.zoningtool.zoningupdates.entity.ZoningUpdate;
 
 public class ZoningUpdateMapper {
 

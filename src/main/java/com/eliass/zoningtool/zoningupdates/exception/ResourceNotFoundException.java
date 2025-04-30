@@ -1,4 +1,4 @@
-package com.eliass.zoningtool.exception;
+package com.eliass.zoningtool.zoningupdates.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
