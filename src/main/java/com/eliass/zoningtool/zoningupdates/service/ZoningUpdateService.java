@@ -1,6 +1,6 @@
-package com.eliass.zoningtool.service;
+package com.eliass.zoningtool.zoningupdates.service;
 
-import com.eliass.zoningtool.dto.ZoningUpdateDto;
+import com.eliass.zoningtool.zoningupdates.dto.ZoningUpdateDto;
 
 import java.util.List;
 
