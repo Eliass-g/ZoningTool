@@ -18,7 +18,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(entityManagerFactoryRef = "zoningUpdatesEntityManagerFactory", transactionManagerRef = "zoningUpdatesTransactionManager", basePackages = {"com.eliass.zoningtool.zoningupdates.repository"})
+@EnableJpaRepositories(entityManagerFactoryRef = "zoningUpdatesEntityManagerFactory", transactionManagerRef = "zoningUpdatesTransactionManager", basePackages = {"com.eliass.zoningtool.zoningtooldb.repository"})
 
 public class ZoningUpdatesConfig {
 
@@ -38,7 +38,7 @@ public class ZoningUpdatesConfig {
     @Primary
     @Bean
     public LocalContainerEntityManagerFactoryBean zoningUpdatesEntityManagerFactory(@Qualifier("zoningUpdatesDataSource") DataSource hubDataSource, EntityManagerFactoryBuilder builder) {
-        return builder.dataSource(hubDataSource).packages("com.eliass.zoningtool.zoningupdates.entity")
+        return builder.dataSource(hubDataSource).packages("com.eliass.zoningtool.zoningtooldb.entity")
                 .persistenceUnit("zoningUpdates").build();
     }
 
