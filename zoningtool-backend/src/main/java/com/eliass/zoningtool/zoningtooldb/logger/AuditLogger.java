@@ -1,4 +1,4 @@
-package com.eliass.zoningtool.audit;
+package com.eliass.zoningtool.zoningtooldb.logger;
 
 import com.eliass.zoningtool.zoningtooldb.entity.AuditLog;
 import com.eliass.zoningtool.zoningtooldb.repository.AuditLogRepository;
