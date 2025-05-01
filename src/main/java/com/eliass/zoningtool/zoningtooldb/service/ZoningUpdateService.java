@@ -24,4 +24,8 @@ public interface ZoningUpdateService {
     ParcelDto getParcelById(Integer parcelId);
 
     List<ParcelDto> bulkUpdate(List<ParcelDto> updates);
+
+    void bulkDelete(List<Integer> parcelIds);
+
+    void deleteAllUpdates();
 }
