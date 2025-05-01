@@ -11,7 +11,7 @@ import com.eliass.zoningtool.zoningtooldb.entity.ZoningUpdate;
 import com.eliass.zoningtool.zoningtooldb.exception.ResourceNotFoundException;
 import com.eliass.zoningtool.zoningtooldb.mapper.ZoningUpdateMapper;
 import com.eliass.zoningtool.zoningtooldb.repository.AuditLogRepository;
-import com.eliass.zoningtool.audit.AuditLogger;
+import com.eliass.zoningtool.zoningtooldb.logger.AuditLogger;
 import com.eliass.zoningtool.zoningtooldb.repository.ZoningUpdateRepository;
 import com.eliass.zoningtool.zoningtooldb.service.ZoningUpdateService;
 import lombok.AllArgsConstructor;
