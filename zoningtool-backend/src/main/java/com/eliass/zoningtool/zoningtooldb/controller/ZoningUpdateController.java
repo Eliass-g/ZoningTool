@@ -60,7 +60,7 @@ public class ZoningUpdateController {
         return ResponseEntity.ok(parcelDto);
     }
 
-    @PostMapping("/bulk")
+    @PostMapping("/update")
     public ResponseEntity<List<ParcelDto>> bulkUpdate(@RequestBody List<ParcelDto> updates) {
         List<ParcelDto> savedParcelDtos = zoningUpdateService.bulkUpdate(updates);
         return ResponseEntity.ok(savedParcelDtos);

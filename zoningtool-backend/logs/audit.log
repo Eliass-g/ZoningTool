@@ -5,3 +5,4 @@
 2025-05-01 00:02:37.652 - Skipped zoning update for parcel with ID 4: Zoning type is already set to 'Idustrial'.
 2025-05-01 00:13:03.283 - Zoning update deleted for parcel ID 4.
 2025-05-01 00:13:03.304 - Zoning update deleted for parcel ID 2.
+2025-05-01 22:56:35.186 - Failed zoning bulk update: The given id must not be null

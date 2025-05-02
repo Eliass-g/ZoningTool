@@ -13,24 +13,7 @@ const initialState = {
 const zoningSlice = createSlice({
   name: "zoning",
   initialState,
-  reducers: {
-    setParcels: (state, action) => {
-      state.parcels = action.payload;
-    },
-    toggleSelectParcel: (state, action) => {
-      const id = action.payload;
-      if (state.selectedParcels.includes(id)) {
-        state.selectedParcels = state.selectedParcels.filter(
-          (pid) => pid !== id
-        );
-      } else {
-        state.selectedParcels.push(id);
-      }
-    },
-    clearSelected: (state) => {
-      state.selectedParcels = [];
-    },
-  },
+  reducers: {},
   extraReducers(builder) {
     builder
       .addCase(getParcels.pending, (state) => {
@@ -41,6 +24,27 @@ const zoningSlice = createSlice({
         state.status.parcels = "succeeded";
       })
       .addCase(getParcels.rejected, (state) => {
+        state.status.parcels = "failed";
+      })
+      .addCase(updateZoningType.pending, (state) => {
+        state.status.parcels = "loading";
+      })
+      .addCase(updateZoningType.fulfilled, (state, action) => {
+        console.log(action.payload);
+        state.parcels = state.parcels.map(parcel => {
+          const update = action.payload.find(u => u.id === parcel.id);
+          if (!update) return parcel;
+          
+          return {
+            ...parcel, // Keep all existing properties
+            orgZoningTyp: parcel.orgZoningTyp ?? parcel.zoningTyp, // Set original zoning
+            zoningTyp: update.zoningTyp     // Update to new zoning
+          };
+        });
+        console.log(state.parcels);
+        state.status.parcels = "succeeded";
+      })
+      .addCase(updateZoningType.rejected, (state) => {
         state.status.parcels = "failed";
       });
   },
@@ -53,6 +57,19 @@ export const getParcels = createAsyncThunk("zoning/getParcels", async () => {
   });
   return response.data;
 });
+
+export const updateZoningType = createAsyncThunk(
+  "zoning/updateZoningType",
+  async (parcels) => {
+    console.log(parcels);
+    const response = await axios({
+      url: `${appUrl}/api/zoning/update`,
+      method: "POST",
+      data: parcels,
+    });
+    return response.data;
+  }
+);
 
 export const { setParcels, toggleSelectParcel, clearSelected } =
   zoningSlice.actions;
