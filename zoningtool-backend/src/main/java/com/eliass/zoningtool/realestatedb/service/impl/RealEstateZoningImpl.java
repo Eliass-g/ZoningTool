@@ -17,7 +17,7 @@ public class RealEstateZoningImpl implements RealEstateZoningService {
 
     private RealEstateZoningRepository realEstateZoningRepository;
 
-    @Override
+/*    @Override
     public RealEstateZoningDto getRealEstateZoningById(Integer realEstateZoningId) {
         RealEstateZoning realEstateZoning = realEstateZoningRepository.findById(realEstateZoningId)
                 .orElseThrow(() ->
@@ -29,6 +29,6 @@ public class RealEstateZoningImpl implements RealEstateZoningService {
     @Override
     public List<RealEstateZoning> getAllRealEstateZoning() {
         return realEstateZoningRepository.findAllSimple();
-    }
+    }*/
 }
 

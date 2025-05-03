@@ -16,7 +16,7 @@ public class RealEstateZoningController {
 
     private RealEstateZoningService realEstateZoningService;
 
-    @GetMapping("{id}")
+/*    @GetMapping("{id}")
     public ResponseEntity<RealEstateZoningDto> getRealEstateZoningById(@PathVariable("id") Integer realEstateZoningId){
         RealEstateZoningDto realEstateZoningDto = realEstateZoningService.getRealEstateZoningById(realEstateZoningId);
         return ResponseEntity.ok(realEstateZoningDto);
@@ -26,6 +26,6 @@ public class RealEstateZoningController {
     public ResponseEntity<List<RealEstateZoning>> getAllRealEstateZoning(){
         List<RealEstateZoning> realEstateZoning = realEstateZoningService.getAllRealEstateZoning();
         return ResponseEntity.ok(realEstateZoning);
-    }
+    }*/
 
 }
