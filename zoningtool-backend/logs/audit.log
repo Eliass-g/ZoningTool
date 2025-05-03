@@ -3180,3 +3180,21 @@
 2025-05-03 00:27:03.572 - Zoning update deleted for parcel with ID 751: Reverted to original zoning type 'Residential'
 2025-05-03 00:27:03.575 - Zoning update deleted for parcel with ID 752: Reverted to original zoning type 'Residential'
 2025-05-03 00:27:03.577 - Zoning update deleted for parcel with ID 1590: Reverted to original zoning type 'Residential'
+2025-05-03 01:57:18.621 - Zoning update created for parcel with ID 1632: Zoning type 'Residential' to 'Planned'.
+2025-05-03 01:57:18.669 - Zoning update created for parcel with ID 751: Zoning type 'Residential' to 'Planned'.
+2025-05-03 01:57:18.717 - Zoning update created for parcel with ID 750: Zoning type 'Residential' to 'Planned'.
+2025-05-03 01:57:18.778 - Zoning update created for parcel with ID 64: Zoning type 'Residential' to 'Planned'.
+2025-05-03 01:57:33.914 - Zoning update deleted for parcel with ID 64: Reverted to original zoning type 'Residential'
+2025-05-03 01:57:33.916 - Zoning update deleted for parcel with ID 750: Reverted to original zoning type 'Residential'
+2025-05-03 01:57:33.918 - Zoning update deleted for parcel with ID 751: Reverted to original zoning type 'Residential'
+2025-05-03 01:57:33.918 - Zoning update deleted for parcel with ID 1632: Reverted to original zoning type 'Residential'
+2025-05-03 02:19:21.336 - Zoning update created for parcel with ID 806: Zoning type 'Residential' to 'Planned'.
+2025-05-03 02:19:21.398 - Zoning update created for parcel with ID 787: Zoning type 'Residential' to 'Planned'.
+2025-05-03 02:19:21.462 - Zoning update created for parcel with ID 3473: Zoning type 'Residential' to 'Planned'.
+2025-05-03 02:19:21.522 - Zoning update created for parcel with ID 3495: Zoning type 'Residential' to 'Planned'.
+2025-05-03 02:19:21.584 - Zoning update created for parcel with ID 815: Zoning type 'Commercial' to 'Planned'.
+2025-05-03 02:19:35.734 - Zoning update deleted for parcel with ID 787: Reverted to original zoning type 'Residential'
+2025-05-03 02:19:35.739 - Zoning update deleted for parcel with ID 806: Reverted to original zoning type 'Residential'
+2025-05-03 02:19:35.743 - Zoning update deleted for parcel with ID 815: Reverted to original zoning type 'Commercial'
+2025-05-03 02:19:35.747 - Zoning update deleted for parcel with ID 3473: Reverted to original zoning type 'Residential'
+2025-05-03 02:19:35.747 - Zoning update deleted for parcel with ID 3495: Reverted to original zoning type 'Residential'

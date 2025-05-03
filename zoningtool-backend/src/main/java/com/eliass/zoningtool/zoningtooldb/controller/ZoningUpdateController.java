@@ -17,7 +17,7 @@ public class ZoningUpdateController {
 
     private ZoningUpdateService zoningUpdateService;
 
-    @PostMapping
+    /*@PostMapping
     public ResponseEntity<ZoningUpdateDto> createZoningUpdate(@RequestBody ZoningUpdateDto zoningUpdateDto){
         ZoningUpdateDto savedZoningUpdate = zoningUpdateService.createZoningUpdate(zoningUpdateDto);
         return new ResponseEntity<>(savedZoningUpdate, HttpStatus.CREATED);
@@ -52,7 +52,7 @@ public class ZoningUpdateController {
     public ResponseEntity<ParcelDto> getParcelById(@PathVariable("id") Integer parcelId){
         ParcelDto parcelDto = zoningUpdateService.getParcelById(parcelId);
         return ResponseEntity.ok(parcelDto);
-    }
+    }*/
 
     @GetMapping("/parcel")
     public ResponseEntity<List<ParcelDto>> getAllParcels() {
@@ -70,11 +70,5 @@ public class ZoningUpdateController {
     public ResponseEntity<List<Integer>> bulkDelete(@RequestBody List<Integer> parcelIds) {
         zoningUpdateService.bulkDelete(parcelIds);
         return ResponseEntity.ok(parcelIds);
-    }
-
-    @DeleteMapping("/all")
-    public ResponseEntity<Void> deleteAllUpdates() {
-        zoningUpdateService.deleteAllUpdates();
-        return ResponseEntity.noContent().build();
     }
 }

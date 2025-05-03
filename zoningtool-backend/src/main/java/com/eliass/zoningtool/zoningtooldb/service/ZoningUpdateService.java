@@ -8,7 +8,7 @@ import com.eliass.zoningtool.zoningtooldb.dto.ZoningUpdateDto;
 import java.util.List;
 
 public interface ZoningUpdateService {
-    ZoningUpdateDto createZoningUpdate(ZoningUpdateDto zoningUpdateDto);
+/*    ZoningUpdateDto createZoningUpdate(ZoningUpdateDto zoningUpdateDto);
 
     ZoningUpdateDto getZoningUpdateById(Integer zoningUpdateId);
 
@@ -18,14 +18,13 @@ public interface ZoningUpdateService {
 
     void deleteZoningUpdate(Integer zoningUpdateId);
 
+    ParcelDto getParcelById(Integer parcelId);
+    */
 
     List<ParcelDto> getAllParcels();
-
-    ParcelDto getParcelById(Integer parcelId);
 
     List<ParcelDto> bulkUpdate(List<ParcelDto> updates);
 
     List<Integer> bulkDelete(List<Integer> parcelIds);
 
-    void deleteAllUpdates();
 }

@@ -36,7 +36,7 @@ public class ZoningUpdateImpl implements ZoningUpdateService {
 
     private AuditLogger auditLogger;
 
-    @Override
+    /*@Override
     public ZoningUpdateDto createZoningUpdate(ZoningUpdateDto zoningUpdateDto) {
         ZoningUpdate zoningUpdate = ZoningUpdateMapper.mapToZoningUpdate(zoningUpdateDto);
         ZoningUpdate savedZoningUpdate = zoningUpdateRepository.save(zoningUpdate);
@@ -72,9 +72,7 @@ public class ZoningUpdateImpl implements ZoningUpdateService {
         ZoningUpdate zoningUpdate = zoningUpdateRepository.findById(zoningUpdateId).orElseThrow(() -> new ResourceNotFoundException("Zoning update does not exist with id: " + zoningUpdateId));
 
         zoningUpdateRepository.deleteById(zoningUpdateId);
-    }
-
-    @Override
+    }   @Override
     public ParcelDto getParcelById(Integer parcelId) {
         RealEstateZoning parcel = realEstateZoningRepository.findById(parcelId).orElseThrow(() -> new RuntimeException("Parcel not found with ID: " + parcelId));
 
@@ -86,7 +84,7 @@ public class ZoningUpdateImpl implements ZoningUpdateService {
         String originalZoningTyp = zoningUpdateOpt.isPresent() ? parcel.getZoningTyp() : null;
 
         return new ParcelDto(parcel.getId(), geoJson, parcel.getMailadd(), finalZoningTyp, originalZoningTyp);
-    }
+    }*/
 
     @Override
     public List<ParcelDto> getAllParcels() {
@@ -163,12 +161,6 @@ public class ZoningUpdateImpl implements ZoningUpdateService {
             }
         }
         return parcelIds;
-    }
-
-    @Transactional
-    public void deleteAllUpdates() {
-        zoningUpdateRepository.deleteAll();
-        auditLogger.log("All zoning updates have been deleted.");
     }
 
 }

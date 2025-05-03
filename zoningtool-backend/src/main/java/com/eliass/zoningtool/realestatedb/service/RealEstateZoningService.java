@@ -7,9 +7,11 @@ import java.util.List;
 
 public interface RealEstateZoningService {
 
+/*
     RealEstateZoningDto getRealEstateZoningById(Integer zoningUpdateId);
 
     List<RealEstateZoning> getAllRealEstateZoning();
+*/
 
 
 
