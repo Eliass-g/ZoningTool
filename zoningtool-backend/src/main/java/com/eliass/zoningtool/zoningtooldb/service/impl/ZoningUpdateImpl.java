@@ -146,23 +146,23 @@ public class ZoningUpdateImpl implements ZoningUpdateService {
             auditLogger.log("Failed zoning bulk update: " + e.getMessage());
             throw e;
         }
-        return zoningUpdateRepository.findAll().stream()
-                .map(update -> new ParcelDto(update.getParcelId(), null, null, update.getZoningTyp(), update.getOrgZoningTyp()))
-                .toList();
+        return updates;
     }
 
     @Override
     @Transactional
-    public void bulkDelete(List<Integer> parcelIds) {
+    public List<Integer> bulkDelete(List<Integer> parcelIds) {
         for (Integer parcelId : parcelIds) {
             Optional<ZoningUpdate> update = zoningUpdateRepository.findByParcelId(parcelId);
             if (update.isPresent()) {
+                String orgZoningTyp = update.get().getOrgZoningTyp();
                 zoningUpdateRepository.delete(update.get());
-                auditLogger.log(String.format("Zoning update deleted for parcel ID %d.", parcelId));
+                auditLogger.log(String.format("Zoning update deleted for parcel with ID %d: Reverted to original zoning type '%s'", parcelId, orgZoningTyp));
             } else {
                 auditLogger.log(String.format("No zoning update found to delete for parcel ID %d.", parcelId));
             }
         }
+        return parcelIds;
     }
 
     @Transactional

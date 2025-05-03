@@ -1,5 +1,5 @@
 import { React, useEffect } from "react";
-import ZoningMap from "../components/ZoningMap";
+import ZoningMap from "../components/ZoningMap/ZoningMap";
 import { useDispatch, useSelector } from "react-redux";
 import { getParcels } from "../features/zoning/zoningSlice";
 
@@ -15,7 +15,7 @@ const Home = () => {
   }, [dispatch, status.parcels]);
 
   return (<div>
-  {status.parcels === "succeeded" &&
+  {parcels &&
     <ZoningMap parcels={parcels}/>
   }
   </div>);

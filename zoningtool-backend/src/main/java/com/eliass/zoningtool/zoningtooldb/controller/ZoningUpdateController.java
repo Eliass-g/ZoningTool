@@ -60,16 +60,16 @@ public class ZoningUpdateController {
         return ResponseEntity.ok(parcelDto);
     }
 
-    @PostMapping("/bulk")
+    @PostMapping("/update")
     public ResponseEntity<List<ParcelDto>> bulkUpdate(@RequestBody List<ParcelDto> updates) {
         List<ParcelDto> savedParcelDtos = zoningUpdateService.bulkUpdate(updates);
         return ResponseEntity.ok(savedParcelDtos);
     }
 
-    @DeleteMapping("/bulk")
-    public ResponseEntity<Void> bulkDelete(@RequestBody List<Integer> parcelIds) {
+    @DeleteMapping("/delete")
+    public ResponseEntity<List<Integer>> bulkDelete(@RequestBody List<Integer> parcelIds) {
         zoningUpdateService.bulkDelete(parcelIds);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.ok(parcelIds);
     }
 
     @DeleteMapping("/all")
