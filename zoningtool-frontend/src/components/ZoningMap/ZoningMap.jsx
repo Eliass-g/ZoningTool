@@ -130,7 +130,7 @@ const ZoningMap = ({ parcels }) => {
       const isUpdated = parcel.orgZoningTyp !== null;
       const matchesZoning = selectedZoningTypes[zoningType];
       const updatedSelected = selectedZoningTypes.Updated;
-      if (matchesZoning || updatedSelected) {
+      if (matchesZoning || (updatedSelected && isUpdated)) {
         selected.push(parcel);
       }
       if (isUpdated && (matchesZoning || updatedSelected)) {
@@ -175,7 +175,7 @@ const ZoningMap = ({ parcels }) => {
     }
   };
 
-   //Delete parcel zoning type with backend request and update state on frontend
+  //Delete parcel zoning type with backend request and update state on frontend
   const handleDeleteZoning = async () => {
     if (selectedParcelsForDelete.length === 0) return;
     try {
