@@ -33,7 +33,6 @@ const zoningSlice = createSlice({
         state.status.parcels = "loading";
       })
       .addCase(updateZoningType.fulfilled, (state, action) => {
-
         state.parcels = state.parcels.map((parcel) => {
           const update = action.payload.find((u) => u.id === parcel.id);
           if (!update || update.zoningTyp === update.orgZoningTyp)

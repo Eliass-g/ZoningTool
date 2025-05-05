@@ -93,7 +93,7 @@ const SelectionSection = ({
                 >
                   <option value="">Select Type</option>
                   {Object.keys(ZONING_COLORS)
-                    .filter((type) => type !== "default")
+                    .filter((type) => type !== "Updated")
                     .map((type) => (
                       <option key={type} value={type}>
                         {type}

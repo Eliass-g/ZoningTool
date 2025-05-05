@@ -33,7 +33,7 @@ export const renderFilteredParcels = (
     const isUpdated = parcel.orgZoningTyp !== null;
     if (
       (!isUpdated && zoningTypes[zoningType]) ||
-      (zoningTypes.Updated && isUpdated) // OR if Updated is checked AND item is updated
+      (zoningTypes.Updated && isUpdated) 
     ) {
       const geoJson = {
         type: "Feature",

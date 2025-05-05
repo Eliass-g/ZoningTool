@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import L from "leaflet";
 import "leaflet.pattern";
 import "leaflet/dist/leaflet.css";
-import "./ZoningMap.css";
+import "./styles/ZoningMap.css";
 import { useDispatch } from "react-redux";
 import {
   deleteZoningType,
@@ -111,9 +111,9 @@ const ZoningMap = ({ parcels }) => {
     });
     if (parcel.orgZoningTyp !== null) {
       setSelectedParcelsForDelete((prev) => {
-        const exists = prev.some((p) => p.id === parcel.id);
+        const exists = prev.some((p) => p === parcel.id);
         if (exists) {
-          return prev.filter((p) => p.id !== parcel.id);
+          return prev.filter((p) => p !== parcel.id);
         } else {
           return [...prev, parcel.id];
         }

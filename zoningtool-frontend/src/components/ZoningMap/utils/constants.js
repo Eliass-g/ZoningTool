@@ -3,5 +3,4 @@ export const ZONING_COLORS = {
   Commercial: "#f2a25c",
   Planned: "#e55e5e",
   Updated: "purple",
-  default: "#ccc",
 };
