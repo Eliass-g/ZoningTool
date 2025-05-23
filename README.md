@@ -2,7 +2,7 @@
 
 ## Zoning Tool
 
-Zoning Tools is a web application that allows users to access, visualize, filter, update, and delete zoning information for land parcels in a user-friendly format.
+Zoning Tool is a web application that allows users to access, visualize, filter, update, and delete zoning information for land parcels in a user-friendly format.
 
 ![App Demo](https://github.com/Eliass-g/ZoningTool/blob/readme/storage/Zoning%20Tool%20Walkthrough%20(2).gif)
 
